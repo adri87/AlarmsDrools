@@ -1,0 +1,84 @@
+package es.upm.dit.gsi.prueba
+
+import es.upm.dit.gsi.parser
+
+rule "1"
+	when
+		saml.status.MS_alarm_SE_white_lamp_fused
+	then
+		saml.status.MS_alarm_SE_blue_lamp_fused
+end
+
+rule "2"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+end
+
+rule "3"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+end
+
+rule "4"
+	when
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+end
+
+rule "5"
+	when
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+end
+
+rule "6"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+	then
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+end
+
+rule "7"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+	then
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+end
+
+rule "8"
+	when
+		saml.status.MS_alarm_SE_blue_lamp_fused
+	then
+		saml.status.MS_alarm_SE_blue_lamp_fused
+end
+
+rule "9"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_blue_lamp_fused
+end
+
+rule "10"
+	when
+		saml.status.MS_alarm_SE_yellow_lamp_fused_2
+	then
+		saml.status.MS_alarm_SE_blue_lamp_fused
+end
+
+rule "11"
+	when
+		saml.status.MS_alarm_SE_red_lamp_fused_1
+	then
+		saml.status.MS_alarm_SE_blue_lamp_fused
+end
+
